@@ -1,4 +1,4 @@
-package step08.springMvc.server;
+package step09.springMvc.server;
 
 
 import org.eclipse.jetty.server.Server;
@@ -25,7 +25,7 @@ public class Main {
 
     private static WebApplicationContext getContext() {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-        context.setConfigLocation("step08.springMvc.config");
+        context.setConfigLocation("step09.springMvc.config");
         return context;
     }
 

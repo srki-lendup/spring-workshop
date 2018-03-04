@@ -1,10 +1,10 @@
-package step08.springMvc.controller;
+package step09.springMvc.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import step08.springMvc.model.Book;
+import step09.springMvc.model.Book;
 
 @Controller
 @RequestMapping("/")

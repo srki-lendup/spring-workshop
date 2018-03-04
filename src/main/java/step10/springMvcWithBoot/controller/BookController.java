@@ -1,9 +1,9 @@
-package step09.springMvcWithBoot.controller;
+package step10.springMvcWithBoot.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import step09.springMvcWithBoot.model.Book;
+import step10.springMvcWithBoot.model.Book;
 
 @RestController
 public class BookController {

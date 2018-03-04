@@ -1,4 +1,4 @@
-package step09.springMvcWithBoot;
+package step10.springMvcWithBoot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

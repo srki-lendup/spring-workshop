@@ -1,4 +1,4 @@
-package step09.springMvcWithBoot.model;
+package step09.springMvc.model;
 
 import org.springframework.stereotype.Component;
 

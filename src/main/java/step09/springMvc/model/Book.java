@@ -1,4 +1,4 @@
-package step09.springMvcWithBoot.model;
+package step09.springMvc.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
