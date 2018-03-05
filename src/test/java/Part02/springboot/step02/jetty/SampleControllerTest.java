@@ -1,5 +1,6 @@
-package Part02.springboot.step02.config;
+package Part02.springboot.step02.jetty;
 
+import Part02.springboot.step02.jetty.ConfiguredJettyApplication;
 import io.restassured.RestAssured;
 import org.apache.http.HttpStatus;
 import org.hamcrest.Matchers;
