@@ -1,4 +1,4 @@
-package Part02.springboot.step02.config;
+package Part02.springboot.step02.jetty;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

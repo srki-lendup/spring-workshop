@@ -1,4 +1,4 @@
-package Part02.springboot.step02.config;
+package Part02.springboot.step03.actuators;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
