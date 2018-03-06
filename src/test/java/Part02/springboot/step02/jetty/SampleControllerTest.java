@@ -21,6 +21,8 @@ public class SampleControllerTest {
     @Test
     @Ignore
     public void home( ) throws Exception {
+        // watch out, there's an evil non-default port!
+        // see the comment section in ConfiguredJettyApplication for that one
         RestAssured.port = 9000;
         when( ).
                 get( "/" ).
