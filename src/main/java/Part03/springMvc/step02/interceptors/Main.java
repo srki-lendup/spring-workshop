@@ -1,4 +1,4 @@
-package Part03.springMvc.step02.springMvcWithBoot;
+package Part03.springMvc.step02.interceptors;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package Part03.springMvc.step02.springMvcWithBoot.model;
+package Part03.springMvc.step02.interceptors.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
