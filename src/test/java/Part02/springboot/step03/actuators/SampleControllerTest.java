@@ -2,27 +2,30 @@ package Part02.springboot.step03.actuators;
 
 import io.restassured.RestAssured;
 import org.apache.http.HttpStatus;
-import org.junit.Ignore;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.boot.test.autoconfigure.properties.PropertyMapping;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import static io.restassured.RestAssured.when;
 
 @RunWith( SpringRunner.class )
-@SpringBootTest( classes = { Application.class } )
-@WebAppConfiguration
+@SpringBootTest( classes = { Application.class }, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT )
 public class SampleControllerTest {
+    @LocalServerPort
+    private int port;
 
+    @Before
     public void before() {
         // you will need a config that enables actuators, and the library in the gradle
-        RestAssured.port = 8080;
+        RestAssured.port = port;
     }
 
     @Test
-    @Ignore
     public void health( ) throws Exception {
         when( ).
                 get( "/actuator/health" ).
@@ -31,7 +34,6 @@ public class SampleControllerTest {
     }
 
     @Test
-    @Ignore
     public void trace( ) throws Exception {
         when( ).
                 get( "/actuator/httptrace" ).
@@ -40,7 +42,6 @@ public class SampleControllerTest {
     }
 
     @Test
-    @Ignore
     public void beans( ) throws Exception {
         when( ).
                 get( "/actuator/beans" ).
@@ -49,7 +50,6 @@ public class SampleControllerTest {
     }
 
     @Test
-    @Ignore
     public void auditevents( ) throws Exception {
         when( ).
                 get( "/actuator/auditevents" ).
@@ -58,7 +58,6 @@ public class SampleControllerTest {
     }
 
     @Test
-    @Ignore
     public void configprops( ) throws Exception {
         when( ).
                 get( "/actuator/configprops" ).
@@ -67,7 +66,6 @@ public class SampleControllerTest {
     }
 
     @Test
-    @Ignore
     public void loggers( ) throws Exception {
         when( ).
                 get( "/actuator/loggers" ).
@@ -76,7 +74,6 @@ public class SampleControllerTest {
     }
 
     @Test
-    @Ignore
     public void env( ) throws Exception {
         when( ).
                 get( "/actuator/env" ).
