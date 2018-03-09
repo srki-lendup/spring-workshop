@@ -1,6 +1,5 @@
 package Part02.springboot.step04.interceptorsAndMetrics;
 
-import Part02.springboot.step03.actuators.Application;
 import io.restassured.RestAssured;
 import org.apache.http.HttpStatus;
 import org.hamcrest.Matchers;
@@ -10,20 +9,19 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
 
 import static io.restassured.RestAssured.when;
 
 @RunWith( SpringRunner.class )
-@SpringBootTest( classes = { Application.class } )
-// note that now we require a WebAppConfiguration for the metric to be registered correctly
-@WebAppConfiguration
+@SpringBootTest( classes = { Application.class }, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT )
 public class MetricMagicTest {
+    @LocalServerPort
+    private int port;
 
     @Before
     public void before() {
         // this requires a micrometer-registry-prometheus on the classpath to work
-        RestAssured.port = 8080;
+        RestAssured.port = port;
     }
 
     @Test

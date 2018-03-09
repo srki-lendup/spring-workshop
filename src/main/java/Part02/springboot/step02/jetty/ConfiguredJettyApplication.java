@@ -2,10 +2,7 @@ package Part02.springboot.step02.jetty;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-/*
-import org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory;
-import org.springframework.context.annotation.Bean;
-*/
+
 
 @SpringBootApplication
 public class ConfiguredJettyApplication {
@@ -13,7 +10,8 @@ public class ConfiguredJettyApplication {
         SpringApplication.run( ConfiguredJettyApplication.class, args );
     }
 
-    /*@Bean
+    /*
+    @Bean
     public JettyServletWebServerFactory jettyEmbeddedServletContainerFactory() {
 
         JettyServletWebServerFactory jettyContainer =

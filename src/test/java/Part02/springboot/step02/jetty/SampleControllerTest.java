@@ -1,6 +1,5 @@
 package Part02.springboot.step02.jetty;
 
-import Part02.springboot.step02.jetty.ConfiguredJettyApplication;
 import io.restassured.RestAssured;
 import org.apache.http.HttpStatus;
 import org.hamcrest.Matchers;
@@ -9,13 +8,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
 
 import static io.restassured.RestAssured.when;
 
 @RunWith( SpringRunner.class )
-@SpringBootTest( classes = { ConfiguredJettyApplication.class } )
-@WebAppConfiguration
+@SpringBootTest( classes = { ConfiguredJettyApplication.class },
+        webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT )
 public class SampleControllerTest {
 
     @Test

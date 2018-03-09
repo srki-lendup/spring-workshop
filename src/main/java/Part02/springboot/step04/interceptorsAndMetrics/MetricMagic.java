@@ -1,5 +1,5 @@
 package Part02.springboot.step04.interceptorsAndMetrics;
-/*
+
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +18,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Component
-*/
-public class MetricMagic /*implements WebMvcConfigurer, AsyncHandlerInterceptor*/ {
-    /*private final Counter counter;
+public class MetricMagic implements WebMvcConfigurer, AsyncHandlerInterceptor {
+    private final Counter counter;
 
     @Bean
     MeterRegistryCustomizer<MeterRegistry> metricsCommonTags() {
@@ -44,6 +43,6 @@ public class MetricMagic /*implements WebMvcConfigurer, AsyncHandlerInterceptor*
 
     @Override
     public void addInterceptors( InterceptorRegistry registry ) {
-        registry.addInterceptor( this ).addPathPatterns( "**\/*" );
-    }*/
+        registry.addInterceptor( this ).addPathPatterns( "**/*" );
+    }
 }
